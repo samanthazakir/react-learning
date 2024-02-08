@@ -1,5 +1,5 @@
 function MultiComponent2() {
-    const items = [
+    let items = [
         'Perth', 
         'Sydney', 
         'Melbourne', 
@@ -7,10 +7,15 @@ function MultiComponent2() {
         'Darwin'
     ];
 
+    items = [];
     
+    const getMessage = () =>{
+         items.length === 0 ? <p>No items found</p> : null;
+    }
     return (
     <>
-        <h1>This is an exampke of react doesnt allow multiple component. and this it how you need to handle it</h1>
+        <h1>List</h1>
+        {getMessage()}
         <ul className="list-group">
             {items.map(item => <li>{item}</li>)}
         </ul>

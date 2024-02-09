@@ -1,6 +1,11 @@
+import { useState } from "react";
+
 function WorkingComponent() {
   let items = ["Perth", "Sydney", "Melbourne", "Brisbane", "Darwin"];
 
+  // Event handler
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+   
   
   return (
     <>
@@ -9,9 +14,9 @@ function WorkingComponent() {
       <ul className="list-group">
         {items.map((item, index) => (
           <li
-            className="list-group-item"
+            className= {selectedIndex === index ? 'list-group-item active' : 'list-group-item'}
             key={item}
-            onClick={() => console.log(item, index)}
+            onClick={() => {setSelectedIndex(index)}}
           >
             {item}
           </li>

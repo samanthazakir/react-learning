@@ -10,7 +10,7 @@ function MultiComponent2() {
     items = [];
     
     const getMessage = () =>{
-         items.length === 0 ? <p>No items found</p> : null;
+         items.length == 0 ? <p>No items found</p> : null;
     }
     return (
     <>

@@ -6,8 +6,9 @@ import MultiComponent2 from './components/MultiComponentWay2'
 import WorkingComponent from './components/WorkingComponent'
 function App() {
   const [count, setCount] = useState(0)
+  let items = ["Perth", "Sydney", "Melbourne", "Brisbane", "Darwin"];
 
-  return <div><WorkingComponent></WorkingComponent></div>
+  return <div><WorkingComponent items={items} heading="Cities"/></div>
 }
 
 export default App
